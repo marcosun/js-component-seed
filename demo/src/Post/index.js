@@ -4,7 +4,7 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
 
-import test from 'js-component-seed';
+import Demo from 'js-component-seed';
 
 @hot(module)
 /**
@@ -17,7 +17,7 @@ export default class Component extends React.Component {
    */
   constructor(props) {
     super(props);
-    alert(test());
+    alert(Demo());
   }
 
   /**

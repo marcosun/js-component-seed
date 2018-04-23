@@ -2,8 +2,7 @@
   "name": "js-component-seed",
   "version": "0.0.1",
   "description": "A seed for writing javascript component",
-  "main": "index.js",
-  "module": "cjs/index.js",
+  "main": "cjs/index.js",
   "scripts": {
     "start": "nodemon --exec yarn run build:dev",
     "build:dev": "node ./config/build.dev.js",
