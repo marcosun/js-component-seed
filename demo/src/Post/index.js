@@ -2,8 +2,9 @@
  * @module Demo/Post
  */
 import React from 'react';
-import test from 'Library';
 import {hot} from 'react-hot-loader';
+
+import test from 'js-component-seed';
 
 @hot(module)
 /**

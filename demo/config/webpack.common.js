@@ -77,11 +77,5 @@ module.exports = {
         }
       }
     }
-  },
-
-  resolve: {
-    alias: {
-      Library: path.libraryComponent
-    }
   }
 };

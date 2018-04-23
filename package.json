@@ -5,6 +5,7 @@
   "main": "index.js",
   "module": "cjs/index.js",
   "scripts": {
+    "start": "nodemon --exec yarn run build:dev",
     "build": "node ./config/build.js",
     "analyse": "webpack --config ./config/webpack.analyse.js",
     "test": "jest",
@@ -26,7 +27,8 @@
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.7.0",
     "jest": "^22.4.3",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "nodemon": "^1.17.3"
   },
   "files": [
     "lib",
