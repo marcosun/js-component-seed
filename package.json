@@ -6,7 +6,8 @@
   "module": "cjs/index.js",
   "scripts": {
     "start": "nodemon --exec yarn run build:dev",
-    "build": "node ./config/build.js",
+    "build:dev": "node ./config/build.dev.js",
+    "build:prod": "node ./config/build.prod.js",
     "analyse": "webpack --config ./config/webpack.analyse.js",
     "test": "jest",
     "test:watch": "npm test -- --watch",
