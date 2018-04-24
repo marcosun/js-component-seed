@@ -9,7 +9,7 @@ const exec = (command, extraEnv) => {
 
 console.log('Building CommonJS modules ...');
 
-exec('babel lib -d demo/node_modules/js-component-seed --ignore test.js', {
+exec('babel src -d demo/node_modules/js-component-seed --ignore test.js', {
   BABEL_ENV: 'cjs',
   NODE_ENV: 'development',
 });

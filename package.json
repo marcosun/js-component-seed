@@ -10,7 +10,7 @@
     "analyse": "webpack --config ./config/webpack.analyse.js",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "doc": "jsdoc lib -r"
+    "doc": "jsdoc src -r"
   },
   "repository": "git@github.com:marcosun/js-component-seed.git",
   "author": "marcosun <marcoinbristol@gmail.com>",
