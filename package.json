@@ -4,6 +4,14 @@
   "description": "A seed for writing javascript component",
   "main": "cjs/index.js",
   "scripts": {
+    "start": "nodemon --exec yarn run dev",
+    "dev": "cross-env NODE_ENV=production babel src -d demo/node_modules/js-component-seed --ignore *.test.js",
+    "prebuild": "rimraf build",
+    "build:es2015": "cross-env NODE_ENV=production babel src -d build --ignore *.test.js",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d build/es --ignore *.test.js",
+    "build:copy-files": "babel-node ./script/copy-files.js",
+    "build": "yarn prebuild && yarn build:es2015 && yarn build:es && yarn build:copy-files",
+    "version": "yarn build && npm publish build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "doc": "jsdoc src -r"
