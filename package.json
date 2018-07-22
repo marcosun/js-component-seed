@@ -10,8 +10,8 @@
     "build": "yarn clean && yarn build:es5 && yarn build:es6 && yarn build:copy-files",
     "build:copy-files": "babel-node ./script/copy-files.js",
     "build:es5": "cross-env NODE_ENV=production babel src -d build/cjs --ignore *.test.js",
-    "build:es6": "cross-env NODE_ENV=production BABEL_ENV=ES6 babel src -d build/es --ignore *.test.js",
-    "start": "nodemon --exec yarn run dev",
+    "build:es6": "cross-env NODE_ENV=production BABEL_ENV=es6 babel src -d build/es --ignore *.test.js",
+    "start": "nodemon --exec yarn dev",
     "test": "jest",
     "test:watch": "npm test --watch",
     "version": "yarn build && npm publish build"
