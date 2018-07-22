@@ -1,7 +1,7 @@
 const ENV = process.env.BABEL_ENV;
 let config;
 
-if (ENV === 'es') {
+if (ENV === 'ES6') {
   config = {};
 } else {
   config = {
@@ -15,9 +15,8 @@ if (ENV === 'es') {
             firefox: 45,
             chrome: 49,
             safari: 10,
-            node: '6.11',
+            node: '6.10',
           },
-          modules: ENV === 'modules' ? false : 'commonjs',
         },
       ],
     ],
