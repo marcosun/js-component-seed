@@ -5,8 +5,14 @@ import fse from 'fs-extra';
 
 async function copyFile(file) {
   const buildPath = path.resolve(__dirname, '../build/', path.basename(file));
-  await fse.copy(file, buildPath);
-  console.log(`Copied ${file} to ${buildPath}`);
+  console.log(`Copying ${file} to ${buildPath}`);
+
+  try () {
+    await fse.copy(file, buildPath);
+    console.log(`OK!`);
+  } catch(e) {
+    console.error('FAILED!!!');
+  }
 }
 
 async function run() {
