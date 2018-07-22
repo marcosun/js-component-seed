@@ -1,7 +1,7 @@
 {
   "name": "js-component-seed",
   "version": "0.0.1",
-  "description": "A seed for writing javascript component",
+  "description": "Start point for a javascript package",
   "main": "cjs/index.js",
   "scripts": {
     "start": "nodemon --exec yarn run dev",
