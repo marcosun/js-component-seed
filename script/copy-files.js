@@ -7,11 +7,11 @@ async function copyFile(file) {
   const buildPath = path.resolve(__dirname, '../build/', path.basename(file));
   console.log(`Copying ${file} to ${buildPath}`);
 
-  try () {
+  try {
     await fse.copy(file, buildPath);
-    console.log(`OK!`);
+    console.log(`${file} OK!`);
   } catch(e) {
-    console.error('FAILED!!!');
+    console.error(`${file} FAILED!!!`);
   }
 }
 
