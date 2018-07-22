@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Start point for a javascript package",
   "main": "cjs/index.js",
+  "module": "es/index.js",
   "scripts": {
     "clean": "rimraf build",
     "dev": "cross-env NODE_ENV=production babel src -d demo/node_modules/js-component-seed --ignore *.test.js",
