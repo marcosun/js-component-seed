@@ -1,10 +1,18 @@
 /* eslint-disable */
-
 import path from 'path';
 import fse from 'fs-extra';
 
+const ENV = process.env.NODE_ENV;
+
 async function copyFile(file) {
-  const buildPath = path.resolve(__dirname, '../build/', path.basename(file));
+  let buildPath;
+
+  if (ENV === 'production') {
+    buildPath = path.resolve(__dirname, '../build/', path.basename(file));
+  } else {
+    buildPath = path.resolve(__dirname, '../demo/node_modules/js-component-seed/', path.basename(file));
+  }
+  
   console.log(`Copying ${file} to ${buildPath}`);
 
   try {
