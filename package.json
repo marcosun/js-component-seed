@@ -19,7 +19,7 @@
     "start": "yarn clean:dev && yarn dev:copy-files && nodemon --exec yarn dev",
     "test": "jest",
     "test:watch": "npm test --watch",
-    "version": "yarn build && npm publish build"
+    "version": "yarn test && yarn build && npm publish build"
   },
   "repository": "git@github.com:marcosun/js-component-seed.git",
   "author": "marcosun <marcoinbristol@gmail.com>",
