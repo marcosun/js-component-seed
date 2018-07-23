@@ -41,5 +41,8 @@
     "jsdoc": "^3.5.5",
     "nodemon": "^1.18.3",
     "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "roots": ["<rootDir>/src/"]
   }
 }

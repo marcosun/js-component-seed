@@ -15,17 +15,7 @@
   "author": "Marco",
   "license": "MIT",
   "jest": {
-    "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest"
-    },
-    "globals": {
-      "BABEL_ENV": "test",
-      "NODE_ENV": "test"
-    },
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-dom"
-    ]
+    "roots": ["<rootDir>/src/"]
   },
   "dependencies": {
     "@material-ui/core": "^1.4.0",
