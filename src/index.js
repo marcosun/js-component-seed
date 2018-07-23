@@ -1,3 +1,3 @@
-import Demo from './Demo';
+import demo from './demo';
 
-export default Demo;
+export default demo;
