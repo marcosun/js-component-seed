@@ -1,19 +1,21 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
 
-import DemoComponent from 'js-component-seed';
+import demo from 'js-component-seed';
 
 /**
  * Export a form call api with post method
  */
 @hot(module)
 class Demo extends React.Component {
+  text = demo();
+
   /**
-   * Render a form sending post data
+   * Render Something.
    * @return {Node}
    */
   render() {
-    return <DemoComponent />;
+    return <div>{this.text}</div>;
   }
 }
 
