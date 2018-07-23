@@ -1,6 +1,6 @@
 {
   "name": "js-component-seed",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Start point for a javascript package",
   "main": "cjs/index.js",
   "module": "es/index.js",
