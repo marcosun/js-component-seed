@@ -12,7 +12,7 @@ async function copyFile(file) {
   } else {
     buildPath = path.resolve(__dirname, '../demo/node_modules/js-component-seed/', path.basename(file));
   }
-  
+
   console.log(`Copying ${file} to ${buildPath}`);
 
   try {
@@ -23,8 +23,35 @@ async function copyFile(file) {
   }
 }
 
+async function createPackageFile() {
+  const packageData = await fse.readFile(path.resolve(__dirname, '../package.json'), 'utf8');
+  const {scripts, devDependencies, jest, ...packageDataOther } = JSON.parse(
+    packageData,
+  );
+
+  const newPackageData = {
+    ...packageDataOther,
+    main: './index.js',
+    module: './index.es.js',
+  };
+
+  let buildPath
+
+  if (ENV === 'production') {
+    buildPath = path.resolve(__dirname, '../build/package.json');
+  } else {
+    buildPath = path.resolve(__dirname, '../demo/node_modules/js-component-seed/package.json');
+  }
+
+  await fse.writeFile(buildPath, JSON.stringify(newPackageData, null, 2), 'utf8');
+
+  return newPackageData;
+}
+
 async function run() {
-  await ['README.md', 'LICENSE', 'package.json'].map(file => copyFile(file));
+  await ['README.md', 'LICENSE'].map(file => copyFile(file));
+
+  await createPackageFile();
 }
 
 run();
