@@ -17,6 +17,7 @@ if (ENV === 'es') {
             safari: 10,
             node: '6.10',
           },
+          modules: ENV === 'modules' ? false : 'commonjs',
         },
       ],
     ],
