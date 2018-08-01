@@ -1,7 +1,7 @@
 const ENV = process.env.BABEL_ENV;
 let config;
 
-if (ENV === 'es6') {
+if (ENV === 'es') {
   config = {};
 } else {
   config = {
