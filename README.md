@@ -19,6 +19,7 @@ Knowing the fact that nearly every single commercial and open-source software ar
 
 ## Output
 
-This project gives two versions of build outputs. 
-- One version produces ES5 syntax with CommonJS module
-- While the other provides ECMAScript 2015 syntax with ECMAScript module.
+You may find the followings in build directory.
+- ES5 with CommonJs modules can be accessed via index.js.
+- ES5 with ES modules can be accessed via index.es.js. (Strongly recommend for the sake of tree shaking)
+- ES6 with ES modules can be accessed via es/index.js.
