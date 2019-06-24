@@ -1,13 +1,14 @@
 const ENV = process.env.BABEL_ENV;
-let config;
 
-if (ENV === 'es') {
-  config = {};
-} else {
-  config = {
+module.exports = () => {
+  if (ENV === 'es') {
+    return {};
+  }
+
+  return {
     presets: [
       [
-        'env',
+        '@babel/preset-env',
         {
           targets: {
             ie: 11,
@@ -22,6 +23,4 @@ if (ENV === 'es') {
       ],
     ],
   };
-}
-
-module.exports = config;
+};
