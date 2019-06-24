@@ -1,8 +1,11 @@
-const ENV = process.env.BABEL_ENV;
+const {
+  BABEL_ENV,
+  NODE_ENV,
+} = process.env;
 
 let presets;
 
-if (ENV === 'es') {
+if (BABEL_ENV === 'es') {
   presets = [];
 } else {
   presets = [
@@ -17,12 +20,16 @@ if (ENV === 'es') {
           safari: 10,
           node: '6.10',
         },
-        modules: ENV === 'modules' ? false : 'commonjs',
+        modules: BABEL_ENV === 'modules' ? false : 'commonjs',
       },
     ],
   ];
 }
 
 module.exports = {
+  /**
+   * Remove comments in production build.
+   */
+  "comments": NODE_ENV !== "production",
   "presets": presets,
 };
