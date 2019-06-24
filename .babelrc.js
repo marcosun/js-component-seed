@@ -30,6 +30,10 @@ module.exports = {
   /**
    * Remove comments in production build.
    */
-  "comments": NODE_ENV !== "production",
+  "comments": NODE_ENV !== 'production',
+  /**
+   * Ignore test files in production build.
+   */
+  "ignore": NODE_ENV === 'production' ? ['**/*.test.js'] : [],
   "presets": presets,
 };
