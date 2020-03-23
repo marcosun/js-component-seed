@@ -18,21 +18,21 @@ async function copyFile(file) {
   try {
     await fse.copy(file, buildPath);
     console.log(`${file} OK!`);
-  } catch(e) {
+  } catch (e) {
     console.error(`${file} FAILED!!!`);
   }
 }
 
 async function createPackageFile() {
   const packageData = await fse.readFile(path.resolve(__dirname, '../package.json'), 'utf8');
-  const {scripts, devDependencies, jest, ...packageDataOther } = JSON.parse(
+  const { scripts, devDependencies, jest, ...packageDataOther } = JSON.parse(
     packageData,
   );
 
   const newPackageData = {
     ...packageDataOther,
-    main: './index.js',
-    module: './index.es.js',
+    main: './lib/index.js',
+    module: './es/index.js',
   };
 
   let buildPath
